@@ -1,4 +1,4 @@
-# ansible-config-mgt. Dolapo-Dev has done it 
+# ansible-config-mgt. 
 ##To resolve the following error below:
 {"msg": "Using a SSH password instead of a key is not possible because Host Key checking is enabled and sshpass does not support this. Please add this host's fingerprint to your known_hosts file to manage this host."}  
 ### Do the following
