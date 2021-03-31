@@ -1,0 +1,50 @@
+---
+- name: update web, nfs and db servers
+  hosts: webservers, nfs
+  remote_user: ec2-user
+  become: yes
+  become_user: root
+  tasks:
+  - name: ensure wireshark is at the latest version
+    yum:
+      name: wireshark
+      state: latest
+  - name: update yum
+    yum: 
+      name: yum
+      state: latest
+  - name: install and nfs-client
+    yum:
+      name: yum
+      state: latest
+  - name: create directory
+    file:
+       path: /home/ec2-user/ansible
+       state: directory
+
+- name: update LB server
+  hosts: lb
+  remote_user: ubuntu
+  become: yes
+  become_user: root
+  tasks:
+  - name: ensure wireshark is at the latest version
+    apt:
+      name: wireshark
+      state: latest
+  - name: update apt packages
+    apt:
+      upgrade: "yes"
+      update_cache: yes
+      cache_valid_time: 86400 #one day
+  - name: install nfs-client
+    apt:
+      name: nfs-common
+      state: latest
+  - name: create directory
+    file:
+       path: /home/ubuntu/ansible
+       state: directory
+      
+
+
