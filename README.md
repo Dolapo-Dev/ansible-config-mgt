@@ -1,1 +1,1 @@
-# ansible-config-mgt. Dolapo-Dev
+# ansible-config-mgt.
