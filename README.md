@@ -1,1 +1,1 @@
-# ansible-config-mgt. Dolapo-Dev has done it 
+## Automation of using ansible playbook
