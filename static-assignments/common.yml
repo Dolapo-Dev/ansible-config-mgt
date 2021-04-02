@@ -1,6 +1,5 @@
 ---
 - name: update web, nfs and db servers
-  hosts: "{{ hostslist }}"
   remote_user: ec2-user
   become: yes
   become_user: root
@@ -23,7 +22,6 @@
        state: directory
 
 - name: update LB server
-  hosts: "{{ hostslist }}"
   remote_user: ubuntu
   become: yes
   become_user: root
