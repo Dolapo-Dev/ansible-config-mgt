@@ -1,4 +1,3 @@
-
 ---
   - name: run common playbook
   - import_playbook: ../static-assignments/common.yml 
