@@ -1,4 +1,12 @@
 ---
-host: all
+white_check_mark
+eyes
+raised_hands
+
+
+
+
+---
   - name: run common playbook
+    hosts: all
   - import_playbook: ../static-assignments/common.yml
