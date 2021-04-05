@@ -1,4 +1,5 @@
 
 ---
   - name: run common playbook
+  host: all
   - import_playbook: ../static-assignments/common.yml hostlist=all
