@@ -1,5 +1,5 @@
 ---
 
-- import_playbook: ../static-assignments/common.yml 
+hosts: all
 
-  hosts: all
+- import_playbook: ../static-assignments/common.yml
