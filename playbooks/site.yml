@@ -1,5 +1,4 @@
 ---
-<<<<<<< HEAD
 - name: Include dynamic variables
   hosts: all
   tasks:
@@ -12,16 +11,3 @@
   hosts: webservers
     - import_playbook: ../static-assignments/webservers.yml
 
-=======
-- name: Include dynamic variables 
-  hosts: all
-  tasks:
-    - import_playbook: ../static-assignments/common.yml 
-    - include_playbook: ../dynamic-assignments/env-vars.yml
-  tags:
-    - always
->>>>>>> roles-feature
-
-- name: Webserver assignment
-  hosts: webservers
-    - import_playbook: ../static-assignments/webservers.yml
