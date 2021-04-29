@@ -24,3 +24,11 @@
 - include_tasks: databases.yml
 - include_tasks: users.yml
 - include_tasks: replication.yml
+
+# Copy database dump file to remote host and restore it to database 'tooling'
+- name: Import DB dump files
+  template:
+    src: tooling-db.sql
+    dest: /tmp
+- name: Import DB 
+  shell: mysql tooling < /tmp/tooling-db.sql
