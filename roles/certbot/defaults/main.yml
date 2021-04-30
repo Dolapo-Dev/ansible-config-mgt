@@ -9,12 +9,12 @@ certbot_auto_renew_options: "--quiet --no-self-upgrade"
 # Parameters used when creating new Certbot certs.
 certbot_create_if_missing: false
 certbot_create_method: standalone
-certbot_admin_email: email@example.com
+certbot_admin_email: obedolapo01@gmail.com
 certbot_certs: []
-# - email: janedoe@example.com
-#   domains:
-#     - example1.com
-#     - example2.com
+  - email: obedolapo01@gmail.com
+    domains:
+      - tooling.toolingkits.ml
+#     - www.toolingkits.ml
 # - domains:
 #     - example3.com
 certbot_create_command: >-
