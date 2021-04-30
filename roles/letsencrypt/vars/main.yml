@@ -1,3 +1,0 @@
----
-
-letsencrypt_module: "{{ ansible_version.string is version_compare('2.6', '>=') | ternary('acme_certificate', 'letsencrypt') }}"
