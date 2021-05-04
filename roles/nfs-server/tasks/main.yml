@@ -16,11 +16,16 @@
 - include_tasks: setup-Debian.yml
   when: ansible_os_family == 'Debian'
 
-- name: Ensure directories to export exist
+- name: Create a mount directory
   file:  # noqa 208
-    path: "{{ item.strip().split()[0] }}"
+    path: "{{ item }}"
     state: directory
-  with_items: "{{ nfs_exports }}"
+    owner: nobody
+    group: nogroup
+    mode: 0755
+  with_items: 
+    - /mnt/apps
+    - /mnt/logs
 
 - name: Copy exports file.
   template:
