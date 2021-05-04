@@ -3,12 +3,6 @@
 - name: Include OS-specific variables.
   include_vars: "{{ ansible_os_family }}.yml"
 
-- name: Include overrides specific to Fedora.
-  include_vars: Fedora.yml
-  when:
-    - ansible_os_family == 'RedHat'
-    - ansible_distribution == "Fedora"
-
 # Setup/install tasks.
 - include_tasks: setup-RedHat.yml
   when: ansible_os_family == 'RedHat'
